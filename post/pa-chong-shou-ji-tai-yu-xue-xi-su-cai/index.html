@@ -1,0 +1,451 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Webcrawler based on BS | BS 下的简单网络素材爬虫 | Wildcard Studio</title>
+<meta name="description" content="I BELIEVE MEDIA IS ART" />
+<link rel="shortcut icon" href="https://kaliludan.github.io/favicon.ico">
+<link rel="stylesheet" href="https://kaliludan.github.io/styles/main.css">
+
+<script src="https://kaliludan.github.io/media/js/jquery.min.js"></script>
+<script src="https://kaliludan.github.io/media/js/masonry.pkgd.min.js"></script>
+<script src="https://kaliludan.github.io/media/js/aos.js"></script>
+<script src="https://kaliludan.github.io/media/js/pace.min.js"></script>
+<script src="https://kaliludan.github.io/media/js/view-image.min.js"></script>
+<script src="https://kaliludan.github.io/media/js/jquery.magnific-popup.min.js"></script>
+<script src="https://kaliludan.github.io/media/js/functions.js"></script>
+    <meta name="referrer" content="never">
+    <meta name="description" content="Python中有大量的爬虫框架来实现网络内容爬取，但是实现一些静态的内容爬虫往往只需要一些简单的库。我最近有一个需求是爬取一个语言网站的专栏。网上泰语的学习资料非常少，而这个网站的‘每日泰语词汇’栏目我尤其喜欢。但是在手机上用微信公众号一页..." />
+    <meta name="keywords" content="Coding" />
+    <script src="https://kaliludan.github.io/media/js/waterfall.min.js"></script>
+    <script src="https://kaliludan.github.io/media/js/prism.min.js"></script>
+  </head>
+  <body>
+            <header id="header" class="grid-container">
+        <!-- start: .menu-wrapper -->
+        <div class="menu-mobile"> 
+          <i class="fa fa-reorder"></i>
+        </div>
+        <div class="menu-wrapper">
+          <div class="">
+            <div class="logo">
+              <a href="https://kaliludan.github.io"><img src="/media/images/custom-headerLogo.png" alt=""></a>
+            </div>
+            <!-- start: .main-nav -->
+
+            <nav class="main-nav grid-container grid-parent">
+              <ul id="menu-header" class="menu gradient-effect">
+                <li class=""><a href="https://kaliludan.github.io" class="menu">首页</a></li>
+                
+                  <li class="" >
+                    <a href="/archives" class="menu">
+                      归档 Archives
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/tags" class="menu">
+                      标签 Tags
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/post/about" class="menu">
+                      关于我 About
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="https://kaliludan.com/movies/" class="menu">
+                      我的观影 My Movies
+                    </a>
+                  </li>
+                
+                <li class="search-menu-item hide-on-mobile hide-on-tablet"><a href="#search-lightbox" class="lightbox mfp-inline"><i class="fa fa-search-line"></i></a></li>
+              </ul>
+            </nav>
+            <a href="#search-lightbox" class="lightbox epcl-search-button mfp-inline hide-on-tablet hide-on-desktop"><i class="fa fa-search-line"></i></a>
+            <!-- end: .main-nav -->
+            <div class="clear"></div>
+            <div class="border hide-on-tablet hide-on-mobile"></div>
+          </div>    
+          <div class="clear"></div>
+        </div>
+        <!-- end: .menu-wrapper -->
+        <div class="clear"></div>
+      </header>
+      <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
+        <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
+          <div class="search-wrapper section">
+            <form id="gridea-search-form" data-update="1659327916440" action="/search/index.html" class="search-form" _lpchecked="1">
+              <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
+              <button type="submit" class="submit" aria-label="Submit">
+                <i class="fa fa-search-line"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('https://www.howtogeek.com/wp-content/uploads/2021/05/web_crawler_header.jpg?height=200p&amp;trim=2,2,2,2');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2021-10-13"><i class="fa fa-calendar"></i><span class="lately">10 个月前</span></time>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="https://kaliludan.github.io/tag/I3EfZ_YQc/" class="ctag ctag-0 ctag-I3EfZ_YQc" aria-label="">Coding</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">Webcrawler based on BS | BS 下的简单网络素材爬虫</h1>
+            </div>
+          </div>
+        </div>  
+
+        <div class="epcl-page-wrapper">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p>Python中有大量的爬虫框架来实现网络内容爬取，但是实现一些静态的内容爬虫往往只需要一些简单的库。我最近有一个需求是爬取一个语言网站的专栏。网上泰语的学习资料非常少，而这个网站的‘每日泰语词汇’栏目我尤其喜欢。但是在手机上用微信公众号一页一页翻很麻烦，又不能汇总，所以我希望能一次性抓取下这个栏目的网页版的每个文章标题和链接，然后放进一个表格中。</p>
+<!-- more -->
+<p><strong>New Update</strong></p>
+<p>在一段时间后，对爬虫进行了一次迭代。主要针对之前的两个问题</p>
+<ol>
+<li>没有采用面向对象式编程，代码复用性差，结构混乱。</li>
+<li>只解析了链接，没有直接对链接内容进行直接分析。</li>
+</ol>
+<p>这次迭代通过三个函数分别从专业页到内容页进行了文本的存储和解析，并把最终的结果按照文章的标题存储为html文件等待进一步处理。</p>
+<pre><code class="language-python">import requests
+from bs4 import BeautifulSoup
+import urllib
+
+
+def get_page():  # 专题页url
+    page_num = input('pls enter the page num: ')
+    page_list = []
+    for page in range(1, int(page_num) + 1):
+        page_list.append('https://th.hujiang.com/new/c19020/page' + str(page))
+    return page_list
+
+
+def get_html():  # 专题页文章url
+    urls = get_page()
+    articles = []  # 生成要读取的文章url列表
+    for url in urls:
+        article_url = requests.get(url)
+        soup = BeautifulSoup(article_url.text, 'html.parser')  # 解析专题页
+        for news in soup.find_all('a', {'class': 'list-item-title'}):  # 找到专题页中的文章链接
+            articles.append('https://th.hujiang.com' + news.get('href'))
+    return articles
+
+
+def parser_url():  # 从文章url中提取标题和正文的字典
+    result = get_html()
+    content = dict()
+    for url in result:
+        response = urllib.request.urlopen(url)
+        soup = BeautifulSoup(response, 'html.parser')  # 解析url
+        contents = soup.find(&quot;div&quot;, class_=&quot;article-content&quot;)
+        try:
+            contents.img.extract() #去除正文中的图片
+        except:
+            print('extract failed, no photos')
+        title = soup.find(&quot;h1&quot;, class_=&quot;title&quot;).text  # 仅保留所需的标题“每日一词”
+        titleflag = '每日一词'
+        if titleflag in str(title):
+            content[title] = [contents]
+    return content
+
+
+def write_txt(): #写入文件
+    contents_dic = parser_url()
+    for i, kv in enumerate(contents_dic.items()):
+        fo = open((&quot;%s.html&quot; % kv[0]), &quot;w&quot;)
+        fo.write(kv[0])
+        print('file %s is written' % kv[0])
+        fo.write(str(kv[1]))
+        fo.close()
+    print('done')
+
+
+if __name__ == &quot;__main__&quot;:
+    write_txt()
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://kaliludan.github.io/post-images/1644062447478.png" alt="" loading="lazy"></figure>
+<p><strong>前版本</strong></p>
+<p>简单分析这个网站后，发现url不是用<code>js</code>翻页的，所以用<code>for</code>循环直接一页一页过一遍即可。所以整体的思路是把每一页的title和链接直接用BS定位，然后分两条写进一个文件就可以了。<br>
+<img src="https://kaliludan.github.io/post-images/1636832806855.png" alt="" loading="lazy"></p>
+<pre><code class="language-python">import requests
+from bs4 import BeautifulSoup
+import time
+
+def get_html(address, page):`
+    strhtml = requests.get(address)
+    soup = BeautifulSoup(strhtml.text, 'html.parser')
+    for news in soup.find_all('a', {'class': 'list-item-title'}):
+        result = news.get('title') + 'https://th.hujiang.com' + news.get('href') + '\n'
+        # print(result)
+        with open(&quot;cc.txt&quot;) as file:
+            f.write(result)
+    return
+
+
+if __name__ == &quot;__main__&quot;:
+    f = open(&quot;cc.txt&quot;, 'w')
+    for i in range(0, 2):
+        time.sleep(1)
+        link = 'https://th.hujiang.com/new/c19020/page' + str(i)
+        get_html(link, 0)
+f.close()
+</code></pre>
+<p>虽然网站缺乏反爬机制，但是适当的暂停还是更加安全。因此翻页过程中我象征性加了1秒的延时。经过一段时间，最终结果如下。<br>
+<img src="https://kaliludan.github.io/post-images/1636831973295.png" alt="" loading="lazy"><br>
+最终爬出来大概7000多篇文章，此时如何管理和清洗这些链接成了关键。我也想过用内容提取每一页的内容，然后输出成PDF或是其他文件。但是这样不光数据量大，浏览和整理也成问题。最好的解决方案还是合并链接到标题，然后导入到知识管理软件里一键浏览器访问。<br>
+<img src="https://kaliludan.github.io/post-images/1636831420409.png" alt="" loading="lazy"><br>
+非常可惜的是我用的Notion承受不住太大的数据量，表格100行以上就出现预加载缓慢，而且在移动端上还容易误触。经过试验，Notion更适合以CSV的形式呈现这些数据。于是在EXCEL中重新整理数据，然后在副表中用函数一点点调用想阅读的部分，然后导出CSV到Notion就可以了。在手机端也可以凑合用。</p>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              <article class="prev grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://kaliludan.github.io/post-images/documentary-photography-album-bangkok-slums-ji-shi-she-ying-ji-man-gu-pin-min-ku.jpg');"></div>
+                 <a href="https://kaliludan.github.io/post/documentary-photography-album-bangkok-slums-ji-shi-she-ying-ji-man-gu-pin-min-ku/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-11-05">2021-11-05</time>
+                  <h4 class="title white no-margin">Documentary photography album - Bangkok Slums | 纪实摄影集 - 曼谷贫民窟</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://kaliludan.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://kaliludan.github.io/post-images/documentary-animated-plastic-or-ji-lu.png');"></div>
+                 <a href="https://kaliludan.github.io/post/documentary-animated-plastic-or-ji-lu/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2021-09-01">2021-09-01</time>
+                  <h4 class="title white no-margin">Documentary - Project Koh Sak X Animated Plastic | 纪录片 - 保护Sak岛计划 X 定格塑料</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://kaliludan.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div class="clear"></div>
+<script>
+jQuery(document).ready(function($){
+    $('.vemoji-btn').text('😀');
+    $("#comments").on('click', 'span.vat',function(){
+        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+        $('textarea#veditor').focus();
+    })
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+            if ($(window.location.hash).length) {
+                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-200}, 600);
+                clearInterval(checkExist);
+            }
+        }, 100);
+    }
+})
+</script>
+
+              </div>
+            
+
+            </div>
+          </div>
+      </main>
+
+          <footer id="footer" class="grid-container">
+        <div class="widgets row gradient-effect">
+            <div class="default-sidebar border-effect">
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_epcl_posts_thumbs underline-effect">
+                  <h4 class="widget-title title white bordered">最新文章</h4>
+                  
+                  
+                  <article class="item post-0 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://kaliludan.github.io/post/documentary-photography-album-bangkok-slums-ji-shi-she-ying-ji-man-gu-pin-min-ku/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://kaliludan.github.io/post-images/documentary-photography-album-bangkok-slums-ji-shi-she-ying-ji-man-gu-pin-min-ku.jpg');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2021-11-05">2021-11-05</time>
+                      <h4 class="title usmall">
+                        <a href="https://kaliludan.github.io/post/documentary-photography-album-bangkok-slums-ji-shi-she-ying-ji-man-gu-pin-min-ku/">Documentary photography album - Bangkok Slums | 纪实摄影集 - 曼谷贫民窟</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://kaliludan.github.io/post/pa-chong-shou-ji-tai-yu-xue-xi-su-cai/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://www.howtogeek.com/wp-content/uploads/2021/05/web_crawler_header.jpg?height=200p&amp;trim=2,2,2,2');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2021-10-13">2021-10-13</time>
+                      <h4 class="title usmall">
+                        <a href="https://kaliludan.github.io/post/pa-chong-shou-ji-tai-yu-xue-xi-su-cai/">Webcrawler based on BS | BS 下的简单网络素材爬虫</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://kaliludan.github.io/post/documentary-animated-plastic-or-ji-lu/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://kaliludan.github.io/post-images/documentary-animated-plastic-or-ji-lu.png');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2021-09-01">2021-09-01</time>
+                      <h4 class="title usmall">
+                        <a href="https://kaliludan.github.io/post/documentary-animated-plastic-or-ji-lu/">Documentary - Project Koh Sak X Animated Plastic | 纪录片 - 保护Sak岛计划 X 定格塑料</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_tag_cloud underline-effect">
+                  <h4 class="widget-title title white bordered">标签云</h4>
+                  <div class="tagcloud">
+                    
+                      <a href="https://kaliludan.github.io/tag/9AbrGAuxq/" class="ctag ctag-0 ctag-9AbrGAuxq" aria-label="">Photography</a>
+                    
+                      <a href="https://kaliludan.github.io/tag/Se57rP012/" class="ctag ctag-1 ctag-Se57rP012" aria-label="">Documentary</a>
+                    
+                      <a href="https://kaliludan.github.io/tag/I3EfZ_YQc/" class="ctag ctag-2 ctag-I3EfZ_YQc" aria-label="">Coding</a>
+                    
+                      <a href="https://kaliludan.github.io/tag/Ymn_PnF0Y/" class="ctag ctag-3 ctag-Ymn_PnF0Y" aria-label="">Short Film</a>
+                    
+                      <a href="https://kaliludan.github.io/tag/qg5NizFh8/" class="ctag ctag-4 ctag-qg5NizFh8" aria-label="">Creative Content</a>
+                    
+                      <a href="https://kaliludan.github.io/tag/swBLnNYWu/" class="ctag ctag-5 ctag-swBLnNYWu" aria-label="">Advertisement</a>
+                    
+                  </div>
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="epcl_about-2" class="widget widget_epcl_about underline-effect">
+                  <h4 class="widget-title title white bordered">关于我</h4>
+                  <div class="avatar">
+                    <a href="" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url(https://kaliludan.github.io/images/avatar.png);"></span></a>
+                  </div>
+                  <div class="info">
+                    <h4 class="title small author-name gradient-effect no-margin"><a href="">Wildcard Studio</a></h4>
+                    <p class="founder">I BELIEVE MEDIA IS ART</p>
+                    <div class="social">
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </div> 
+                  </div>
+                  <div class="clear"></div>
+                  </section>
+              </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="logo">
+          <a href="https://kaliludan.github.io"><img src="/media/images/custom-footerLogo.png" alt=""></a>
+        </div>
+        <p class="published border-effect">
+          ©2019 共 15 篇文章
+          <br>
+          For Work: <a href="mailto:kaliludan@gmail.com">Send Email</a>
+        </p>
+        
+        <a href="javascript:void(0)" id="back-to-top" class="epcl-button dark" style="display:none">
+          <i class="fa fa-arrow"></i>
+        </a>
+    </footer>
+    
+    <div class="clear"></div>
+
+        
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
+<script>
+    new Valine({
+        el: '#comments',
+        appId: 'yb8NK4dbWL2xS4MnzfyHTKSf-gzGzoHsz' ,
+        appKey: '1YtjKXLq9fqTv95cThhz1TH5',
+        pageSize: 30,
+        placeholder: '既然来了，那就留个痕迹吧~',
+        visitor: false // 阅读量统计
+    })
+</script>
+    
+
+      
+    <script src="https://kaliludan.github.io/media/js/functions-post.js"></script>
+
+    </div>
+    <!-- end: #wrapper -->
+  </body>
+</html>
